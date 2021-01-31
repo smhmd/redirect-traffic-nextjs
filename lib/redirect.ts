@@ -5,7 +5,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 }) => {
   const route = await Promise.resolve("/app/stage-2"); // fetch stage
   console.log("fetching");
-  const pathname = resolvedUrl.split("?")[0]; // e.g., '/application/stage-1'
+  const pathname = resolvedUrl.split("?")[0]; // e.g., '/app/stage-1'
   if (pathname !== route) {
     return {
       redirect: {
